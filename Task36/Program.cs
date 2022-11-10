@@ -34,7 +34,8 @@ int SummOfOddElements(int[] array)
     }
     return summa;
 }
-int[] massive = FillArray(10, -10, 10);
+int size2 = new Random().Next(6, 15); //для разнообразия пусть не пользователь задает размер, а случайно генерирует число
+int[] massive = FillArray(size2, -10, 10);
 PrintArray(massive);
 int result = SummOfOddElements(massive);
 Console.WriteLine($"Сумма элементов, стоящих на нечётных позициях, равна {result}");
