@@ -47,14 +47,16 @@ double FindMin(double[] array)
     }
     return min;
 }
-double DifferenceMaxMin()
+
+double DifferenceMaxMin(double[] array)
 {
-    double[] massive = FillArray(10);
-    PrintArray(massive);
-    double maximum = FindMax(massive);
-    double minimum = FindMin(massive);
+    PrintArray(array);
+    double maximum = FindMax(array);
+    double minimum = FindMin(array);
     double result = maximum - minimum;
     return result;
 }
-double diff = DifferenceMaxMin();
+int size2 = new Random().Next(6, 15);
+double[] massive = FillArray(size2);
+double diff = DifferenceMaxMin(massive);
 Console.WriteLine($"Разница между макисмальным и минимальным элементом массива равна {diff}");
